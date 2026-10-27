@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaizanc-distdrift"
+version = "0.1.0"
+description = "按特征维度比较训练与线上分布，标出漂移最大的维度"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "kaizanc" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://kaizanc.github.io"
+Repository = "https://github.com/kaizanc/distdrift"
+Issues = "https://github.com/kaizanc/distdrift/issues"
+
+[project.scripts]
+distdrift = "distdrift:main"
+
+[tool.setuptools]
+py-modules = ["distdrift"]
